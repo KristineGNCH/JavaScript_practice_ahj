@@ -9,7 +9,7 @@
 
 ---
 
-### [Перемещение элемента](https://github.com/KristineGNCH/ahj/blob/aaec26c0028a056144b9abb7184a76203c37c75d/dom/src/index.html)
+### [Перемещение элемента](https://kristinegnch.github.io/dom/src/index.html)
 
 #### Легенда
 

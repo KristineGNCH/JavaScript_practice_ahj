@@ -1,8 +1,6 @@
-
-
-import Board from './js/Board.js';
-import Character from './js/Character.js';
-import Game from './js/Board.js';
+import Board from './Board';
+import Character from './Character';
+import Game from './Game';
 
 const board = new Board();
 const character = new Character();

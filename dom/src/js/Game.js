@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable indent */
 /* eslint-disable linebreak-style */
 export default class Game {
@@ -7,8 +8,6 @@ export default class Game {
         this.character = character;
         this.activeCharacter = null;
     }
-
-  
 
     newBoard() {
         const board = this.board.getBoard(this.boardSize);
@@ -46,8 +45,8 @@ export default class Game {
 
     play() {
         setInterval(() => {
-            this.generatePosition();
-        }, 800);
+            this.randomPosition();
+        }, 700);
     }
 
       start() {

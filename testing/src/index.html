@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Credit Card Validator</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Check your credit card number</h1>
+      <ul id="cards" class="cards list-unstyled">
+        <li>
+          <img src="../src/svg/visa-svgrepo-com.svg" class="card visa valid" alt="visa">
+        </li>
+        <li>
+          <img src="../src/svg/mastercard-svgrepo-com.svg"  class="card mastercard valid" alt="mastercard">
+        </li>
+        <li>
+         <img src="../src/svg/american-express-svgrepo-com.svg" class= "card amex valid" alt="amex">
+        </li>
+          <img src="../src/svg/jcb-svgrepo-com.svg"  class="card jcb valid" alt="jcb">
+        </li>
+        <li>
+          <img src="../src/svg/diners-club-international-svgrepo-com.svg" class="card diners_club valid" alt="diners club">
+        </li>
+        <li>
+          <img src="../src/svg/mir-svgrepo-com.svg" class="card mir valid" alt="Mir">
+        </li>
+      </ul>
+      <div class="validate"></div>
+      <form id="form" class="form-inline" novalidate="novalidate" required>
+        <div class="form-group">
+          <input
+            class="form-control col-md-6"
+            id="card_number"
+            name="card_number"
+            type="text"
+            placeholder="Please insert a credit card number"
+            data-original-title=""
+            title=""
+            aria-describedby="tooltip28076"
+            required
+          />
+          <div
+            class="tooltip fade bottom in"
+            role="tooltip"
+            id="tooltip28076"
+            style="top: 99.0156px; left: 237px; display: block"
+          >
+            <div class="tooltip-arrow" style="left: 50%"></div>
+            <div id="message" class="tooltip-inner">Please insert a credit card number</div>
+          </div>
+          <a id="submitform" class="btn btn-success">Click to Validate</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
