@@ -19,8 +19,8 @@ h1 {
 }
 
 .card {
-	width: 50px !important;
-	height: 35px !important;
+	width: 39px;
+	height: 25px;
 	text-indent: -9999px;
 	background-position: 0 0;
 	margin-right: 5px

@@ -1,11 +1,12 @@
-/* eslint-disable linebreak-style */
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
   },
   module: {
     rules: [
@@ -26,8 +27,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader, 'css-loader',
+        ],
       },
+      {
+        test: /\.(gif|png|jpg|jpeg|svg|txt)$/,
+        type: 'asset/resource',
+      },
+
     ],
   },
   plugins: [

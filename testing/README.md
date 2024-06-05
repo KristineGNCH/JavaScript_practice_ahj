@@ -1,2 +1,2 @@
 
-[Credit Card Validator](https://github.com/KristineGNCH/JavaScript_practice_ahj/tree/video/testing/src/index.html)
+[Credit Card Validator](https://kristinegnch.github.io/testing/src/index.html)
