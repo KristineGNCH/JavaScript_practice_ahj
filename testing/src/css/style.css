@@ -12,6 +12,7 @@ h1 {
 .title {
 	padding-bottom: 25px;
 }
+
 .cards {
 	display: flex;
 	flex-direction: row;
@@ -43,27 +44,3 @@ h1 {
 .btn {
 	margin-top: 15px;
 }
-
-/* .card.visa {
-	background-image: url(../svg/visa-svgrepo-com.svg);
-}
-
-.card.mastercard {
-	background-image: url(../svg/mastercard-svgrepo-com.svg);
-}
-
-.card.amex {
-	background-image: url(../svg/american-express-svgrepo-com.svg);
-}
-
-.card.jcb {
-	background-image: url(../svg/jcb-svgrepo-com.svg);
-}
-
-.card.diners_club {
-	background-image: url(../svg/diners-club-international-svgrepo-com.svg);
-}
-
-.card.mir {
-	background-image: url(../svg/mir-svgrepo-com.png);
-} */
