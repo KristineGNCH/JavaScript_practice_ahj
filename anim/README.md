@@ -1,1 +1,1 @@
-[# Домашнее задание к занятию "9. Анимации и CSS"](https://kristinegnch.github.io/JavaScript_practice_ahj/anim/src/index.html)
+![CI](https://github.com/KristineGNCH/env/actions/workflows/web.yml/badge.svg)
