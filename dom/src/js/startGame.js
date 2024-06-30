@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable eol-last */
 import Board from './Board';
 import Character from './Character';
 import Game from './Game';
