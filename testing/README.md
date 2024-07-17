@@ -1,2 +1,3 @@
+Домашнее задание по занятию "Организация тестирования"
 
-[Credit Card Validator](https://kristinegnch.github.io/testing/src/index.html)
+### Credit Card Validator

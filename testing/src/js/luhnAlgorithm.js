@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable no-param-reassign */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable linebreak-style */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-unused-vars */
 /* eslint no-cond-assign: "error" */
 export default class LuhnAlgorithm {
@@ -15,15 +16,15 @@ export default class LuhnAlgorithm {
     this.form.addEventListener('submit', this.checkNumber);
   }
 
-  checkCardNumber(e) {
-    const checkDigit = Number(value[value.length - 1]);
-    const nCheck = this.сalcCheckDigit(value);
+  checkNumber(e) {
     e.preventDefault();
     const { value } = this.input;
 
     if (value.length === 19 || (value.length >= 13 && value.length <= 16)) {
+      const checkDigit = Number(value[value.length - 1]);
+      const nCheck = this.сalcCheckDigit(value);
       if (nCheck === checkDigit) {
-        this.cardWidget.messageStatus('invalid-card');
+        this.cardWidget.messageStatus('valid-card');
       } else {
         this.cardWidget.messageStatus('invalid-card');
       }
@@ -40,7 +41,7 @@ export default class LuhnAlgorithm {
       .split('')
       .reverse()
       .map(Number);
-    const sum = invertedArr.reduce((acc, item) => acc + item);
+
     invertedArr.forEach((item, idx) => {
       if (idx === 0 || idx % 2 === 0) {
         invertedArr[idx] = item * 2;
@@ -51,6 +52,7 @@ export default class LuhnAlgorithm {
         invertedArr[idx] = item - 9;
       }
     });
+    const sum = invertedArr.reduce((acc, item) => acc + item);
     return 10 - (sum % 10);
   }
 }
