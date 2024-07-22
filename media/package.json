@@ -8,8 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src",
     "test": "jest",
-    "coverage": "jest --coverage",
-    "ci": "start-test :8080 test"
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",

@@ -1,6 +1,4 @@
 import checkGeolocation from "./checkGeo";
-import audioRec from "./audioRec";
-
 export default class WidgetTimeLine {
   constructor() {
     this.container = document.querySelector(".root");
@@ -11,18 +9,6 @@ export default class WidgetTimeLine {
     this.controlBar = this.container.querySelector(
       "[data-id=timelineControls]"
     );
-    this.buttonAudio = this.container.querySelector(
-      "[data-id=timelineAudioButton]"
-    );
-    this.buttonVideo = this.container.querySelector(
-      "[data-id=timelineVideoButton]"
-    );
-    this.buttonSubmitRecord = this.container.querySelector(
-      "[data-id=timelineSubmitRecordButton]"
-    );
-    this.buttonCancelRecord = this.container.querySelector(
-      "[data-id=timelineCancelRecordButton]"
-    );
 
     this.postForm.addEventListener("submit", (event) => {
       this.submitPost(event);
@@ -32,37 +18,12 @@ export default class WidgetTimeLine {
       if (!event.target.closest(".timeline_button")) return;
       this.toggleControls();
     });
-
-    this.buttonAudio.addEventListener("click", ({ target }) => {
-      this.recordByMediaType(target);
-    });
-
-    this.buttonVideo.addEventListener("click", ({ target }) => {
-      this.recordByMediaType(target);
-    });
-
-    this.buttonSubmitRecord.addEventListener("click", () => {
-      if (this.postContent) this.checkGeoLocAPI(this.postContent);
-    });
-
-    this.buttonCancelRecord.addEventListener("click", () => {
-      this.postContent = null;
-    });
   }
 
   toggleControls() {
-    this.controlBar.children.forEach((controlBarEl1) => 
-        controlBarEl1.classList.toggle("hidden")
+    this.controlBar.children.forEach((controlBarEl1) =>
+      controlBarEl1.classList.toggle("hidden")
     );
-  }
-
-  async recordByMediaType(eventTarget) {
-    this.mediaType = undefined;
-    if (eventTarget.closest(".audio_button")) this.mediaType = "audio";
-    if (eventTarget.closest(".video_button")) this.mediaType = "video";
-    const mediaRecord = await audioRec(`${this.mediaType}`);
-    if (mediaRecord) this.postContent = mediaRecord;
-    if (!this.postContent) this.toggleControls();
   }
 
   showModalManualCoords() {
@@ -94,7 +55,7 @@ export default class WidgetTimeLine {
 
     const modalPopup = this.container.querySelector(".modal_form");
     const modalForm = modalPopup.querySelector(".modal_form");
-    modalForm.setAttribute("novalidate", true);
+    modalForm.setAttribute('novalidate', true);
 
     modalForm.addEventListener("reset", () => {
       modalForm.closest("[data-modal=modal]").remove();
@@ -170,23 +131,7 @@ export default class WidgetTimeLine {
           </div>    
           <form class="modal_form timeline_form">
             <input name="post" placeholder="Введите Ваше сообщение и нажмите ENTER" class="timeline_input" required>   
-            <div data-id="timelineControls" class="timeline_controls">
-              <div data-id="timelineAudioButton" class="timeline_button audio_button">
-                <span>&#127908;</span>
-              </div>
-              <div data-id="timelineVideoButton" class="timeline_button video_button">
-                <span>&#127909;</span>
-              </div>
-              <div data-id="timelineSubmitRecordButton" class="hidden timeline_button submit_record_button">
-                <span>&#10004;</span>
-              </div>
-              <div data-id="timelineRecordTime" class="hidden timeline_record_time">
-                <span data-timer="timerMinutes">00</span>:<span data-timer="timerSecondes">00</span>
-              </div>
-              <div data-id="timelineCancelRecordButton" class="hidden timeline_button cancel_record_button">
-                <span>&#10006;</span>
-              </div>
-            </div>
+            <div data-id="timelineControls" class="timeline_controls"></div>
           </form>
         </div> 
       `;

@@ -51,12 +51,13 @@ body {
 }
 
 .timeline_form {
-	position: fixed;
+
+	/* position: fixed; */
 	bottom: 0;
 	left: 0;
 	padding: 20px;
 	align-items: end;
-	background-color:#FFF5EE;
+	background-color: #FFF5EE;
 }
 
 .modal_form_controls {
@@ -112,8 +113,8 @@ button:focus {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-    padding: 10px;
-    padding-bottom: 28px;
+	padding: 10px;
+	padding-bottom: 28px;
 	margin: 5px 10px 5px 10px;
 	border: 2px solid #696969;
 	border-radius: 10px;
@@ -130,18 +131,6 @@ button:focus {
 	overflow: auto;
 }
 
-.video_player {
-	text-align: center;
-	width: 100%;
-	box-sizing: border-box;
-	margin-top: auto;
-	position: fixed;
-	bottom: 7rem;
-	left: 0;
-	padding: 2rem 2rem 0 2rem;
-	background-color: #FFF5EE;
-}
-
 .timeline_input {
 	border-radius: 10px;
 	align-self: stretch;
@@ -154,34 +143,6 @@ button:focus {
 	position: absolute;
 	z-index: 1;
 	right: 2rem;
-}
-
-.timeline_button {
-	min-width: 2rem;
-	min-height: 2rem;
-	margin-right: 1rem;
-	background-color: #DCDCDC;
-	border: 1px solid #DCDCDC;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-
-.timeline_button:hover {
-	background-color: #90EE90;
-	border-color: #90EE90;
-	font-weight: bold;
-}
-
-.timeline_record_time {
-	margin-right: 1rem;
-	padding: 0.5rem 0;
-}
-
-.timeline_record_time span {
-	vertical-align: middle;
 }
 
 .invalid {
